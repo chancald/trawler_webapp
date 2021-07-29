@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block title %} Trawler Dashboard {% endblock %}
+{% block content %}
+
+<div id="table_data" data-table_data='{{ table_data|tojson  }}'></div>
+<div id="graph_data" data-graph_data='{{ graph_data|tojson }}'></div>
+<div id="pred_data" data-pred_data='{{ pred_data|tojson }}'></div>
+
+<div class='container table-responsive'>
+
+    <div class="row">
+        <table class='table table-sm table-hover mx-auto w-50 my-5' >
+            <thead class="display">
+                <tr>
+                    <th>Stock</th>
+                    <th class="table-header">Open</th>
+                    <th class="table-header">High</th>
+                    <th class="table-header">Low</th>
+                    <th class="table-header">Close</th>
+                    <th class="table-header">Volume</th>
+                    <th class="table-header" id="active-col">Mentions</th>
+                </tr>
+            </thead>
+            <tbody>
+            {%for row in table_data['mentions_top_10']%}
+                <tr class="table-row" id="{{loop.index0}}">
+                    <td>{{row.stock}}</td>
+                    <td>{{row.open}}</td>
+                    <td>{{row.high}}</td>
+                    <td>{{row.low}}</td>
+                    <td>{{row.close}}</td>
+                    <td>{{row.volume}}</td>
+                    <td>{{row.mentions}}</td>
+                </tr> 
+            {%endfor%}
+            </tbody>
+        </table>
+    </div>
+    <div class="d-flex flex-wrap justify-content-center my-5">
+        <div id="trawler-graph" style="height: 45vh;"></div>
+        <div id="pred-box">
+            <h3 id='pred-title'>Prediction</h3>
+            <i id="prediction"></i>
+            <p class="font-weight-bold" id="pred-cont">Going down</p>
+        </div>  
+    </div>
+   
+    
+</div>
+
+{% endblock %}

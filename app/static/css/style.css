@@ -1,0 +1,76 @@
+#active-col {
+    background-color:#dee2e6
+}
+
+#active-row {
+    background-color:#dee2e6
+}
+
+td {
+    font-size: 16px;
+}
+
+th {
+    font-size: 16px;
+}
+
+table.table-hover tbody tr:hover {
+    background-color: #dee2e6; 
+}
+
+.arrow-up {
+    border: solid green;
+    border-width: 0 15px 15px 0;
+    display: inline-block;
+    padding: 30px;
+    margin: 20px;
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+}
+
+.arrow-down {
+    border: solid red;
+    border-width: 0 15px 15px 0;
+    display: inline-block;
+    padding: 30px;
+    margin: 20px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    }
+
+.horizontal-line {
+    border: solid rgb(208, 219, 52);
+    border-width: 0 0 15px 0;
+    display: inline-block;
+    padding: 30px;
+    margin: 20px;
+    }
+
+.wrapper {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 1px;
+  padding: 1px;
+  height: 70vh;
+    }
+
+#pred-box {
+    width: 15vw;
+    text-align: center;
+}
+
+#pred-title {
+    margin-top: 30px;
+    text-decoration: underline; 
+}
+#prediction {
+    margin: 30px;
+}
+
+#confidence {
+    margin: 30px;
+}
+
+p {
+    font-size: large;
+}
