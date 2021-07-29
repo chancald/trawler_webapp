@@ -8,12 +8,7 @@ A web scrapping script is used to scrape the text content of posts on WallStreet
 
 ![image](https://user-images.githubusercontent.com/45889053/127551642-641208f8-459c-40a8-ad39-e334b6b7f396.png)
 
-
-
 # Web app overview
-
-![image](https://user-images.githubusercontent.com/45889053/127551753-f6d12367-c5f9-46d7-acbb-922fc87f11af.png)
-
 
 The web app portion of the Trawler project resides in a remote server, it communicates to Siren through a remote connection to Siren’s MySql database. The webapp was designed as a Monolithic CRUD application. Flask was chosen as the framework of the web app which is a lightweight and customizable solution for the requirements. A MVC (Model-View-Controller) architecture was used.
 
@@ -28,6 +23,8 @@ The webpage consists of 3 main elements, these elements use the data from the JS
 The second element is a graph, this graph displays a time series of the last 6 months of the currently selected row in the table element. The time series x-axis is the date and the y-axis are the mentions and volume columns of that particular stock. 
 
 The third element is a prediction section, in here the predictions JSON file data is displayed. In this case the volume prediction and volume confidence are used from the Predictions database table. When the prediction is 0, a red down arrow is displayed with a message saying that the stock value is predicted to go down with the respective confidence. When the prediction is 1 it displays a horizontal yellow line and a message that says that the stock value is predicted to stay the same with the respective confidence. When the prediction is 2 it displays a green upward arrow and a message saying that the stock is predicted to go up with the respective confidence.
+
+![image](https://user-images.githubusercontent.com/45889053/127551753-f6d12367-c5f9-46d7-acbb-922fc87f11af.png)
 
 
 
